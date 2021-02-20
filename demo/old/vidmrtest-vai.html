@@ -64,30 +64,12 @@
          pubId: '74285b6e-edd4-11e6-9699-0251530a1715',
          elId: 'tc-videox',
          aspectRatio: null, // default 16:9
-         lookNFeel: {
-                placement: {
-                    size: {
-                        d: {
-                            aspectRatio: 0.56,
-                            fixed: { h: 250, w: 300 },
-                            mb: 70
-                        },
-                        m: {
-                            aspectRatio: 0.56,
-                            fixed: { h: 196, w: 350 },
-                            mb: 70
-                            //mt,ml,mr
-                        },
-                    },
-                    slider: {
-                        pos: "rb",
-                        auto: true,
-                        d: { maxW: 300, maxH: 240, mb: 70 },
-                        m: { maxW: 277, maxH:200, mb: 70 }
-                        //mb,mr,ml,mt,zindex
-                    },
-                }
-            },
+         autoPlay: {
+           type: 2, // -1: click to Play, 1,2: autoplay
+           unmute: {
+               dur: 4, // Time after player is unmuted
+           }
+   },
      });
  </script>
 

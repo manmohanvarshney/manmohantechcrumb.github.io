@@ -75,43 +75,6 @@
             logo: { url: "", cta: "" },
             adSlot: 'tcAdSlot',
             lnf: {
-                d: {
-                    "style": 1,
-                    "placement": {
-                        "size": {
-                            "aspectRatio": 0.56,
-                            "fixed": {
-                                "h": 520, // h: height
-                                "w": 640  // w: width
-                            },
-                            "mb": 70 
-                        }
-                    },
-                    "slider": {
-                        "pos": "rb", // r: right; b: bottom; l: left; t: top;
-                        "auto": true, // if auto is true then video move to slider position on scrolling otherwise video is at slider position from starting  
-                        "maxW": 440, // maximum width of slider, maximum height is calculated from video aspectratio and maxW
-                        "mb": 70 // m: margin; b: bottom; r: right; l: left; t: top; 
-                    },
-                    "z": 9999, // z-index
-                    "muteBtn": {
-                        "pos": {
-                            "l": 0, // left distance in vw
-                            "t": 0 // top distance in vh
-                        },
-                        "text": "tap for unMute"
-                    },
-                    "controls": {
-                        "display": "fixed", // default : hover
-                        "hide": [ // controls to hide from video
-                            "playPause",
-                            "duration",
-                            "fullScreen",
-                            "sound"
-                        ],
-                        "progressBottomPos": true
-                    }
-                },
                 m: {
                     "style": 1,
                     "placement": {
@@ -140,13 +103,13 @@
                     },
                     "controls": {
                         "display": "fixed", // default : hover
-                        "hide": [ // controls to hide from video
-                            "playPause",
-                            "duration",
-                            "fullScreen",
-                            "sound"
-                        ],
-                        "progressBottomPos": true
+                        // "hide": [ // controls to hide from video
+                        //     "playPause",
+                        //     "duration",
+                        //     "fullScreen",
+                        //     "sound"
+                        // ],
+                        "progressBottomPos": false
                     }
                 }
             },

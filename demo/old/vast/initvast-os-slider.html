@@ -87,10 +87,11 @@
 <!--<script type="text/javascript" src="//tags.performoo.com/vastos/nw18.js" async="false"></script>-->
 
 <script data-cfasync="false">
-    var tcNW18VastTag = 'https://pubads.g.doubleclick.net/gampad/ads?' +
-        'sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&' +
-        'impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&' +
-        'cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=';
+    // var tcNW18VastTag = 'https://pubads.g.doubleclick.net/gampad/ads?' +
+    //     'sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&' +
+    //     'impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&' +
+    //     'cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=';
+    var tcNW18VastTag = 'https://serv-b.performoo.com/vai/vast?ed=3BRsqtVZBLO+2W2QvZcRpc1IA/Zbe3bRucW47hqqOa3cyDEoeuUs/MFKfA56p6WEsHQLFItqgWnaHC096SItzg==';
 
     var tagObj = [
         {"tag": tcNW18VastTag, "network": "google", "format": "ima"}
@@ -112,19 +113,12 @@
     })("tcEmbed", {
         ed: "jCsxHFDKTlmnRFXDB49wP480lCK4RlpA9NKsQBCv15hG0Fp+S4pyq1FVn1gaKU6xIGdk5Xt9Y3R0G3zlbDEND9JGBr8lgI7ZTx7UdymtqIbWnT1xwTmhsAavgijnqtRpUIAt8IoAcP0VbHe6a7SetQ==", //beta.performoo: TestingNW: test vast publisher ed
         adSlot: 'tcAdSlot',
+        env: "b",
         waitTime: .1,
         pId: "",
         s: 2, w:true,
         lnf: {//looknFeel
-            placement: {
-                d:{h: 196, w: 350, mb: 70},
-                m:{h: 168, w: 300, mb: 70},
-                slider: "rb",
-                z: 99998 //z-index
-            },
-            controls: {
-                display: 'fixed'
-            },
+            d: { "style": 1, "placement": { "size": { "fixed": { "h": "338", "w": "600" }, "aspectRatio": null }, "slider": { "auto": false, "pos": "rb", "mr": 10, "mb": 10, "ml": 10, "mt": 10 } }, "controls": { "display": "fixed", "hide": [], "progressBottomPos": false }, "autoPlay": { "type": 2, "unmute": { "dur": 1 } }, "muteBtn": { "pos": { "l": "2", "t": "4" }, "text": "Tap to unmute" } }
         },
         pb: 2,
     }, 2, tagObj);

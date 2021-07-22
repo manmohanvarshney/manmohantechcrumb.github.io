@@ -7,7 +7,7 @@
                 <![CDATA[ 25.00 ]]>
             </Pricing>
             <!-- <Error>http://example.com/error</Error> -->
-            <Impression id="Impression-ID">http://example.com/track/impression</Impression>
+            <!-- <Impression id="Impression-ID">http://example.com/track/impression</Impression> -->
             <Creatives>
                 <Creative id="5480" sequence="1">
                     <Linear>

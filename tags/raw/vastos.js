@@ -34,77 +34,7 @@ var tagObj = [{ "tag": google_ima_sample, "network": "google", format: "ima" }];
     ed: "3BRsqtVZBLO+2W2QvZcRpc1IA/Zbe3bRucW47hqqOa0baVm5oJDCZzy0KgoPQt+n6RdFydzEKThaeo3VCNBuzKiftP+qcmjoaRpX2WQaL/6F3Hf2A/5rv3ADtS2vIxeWUIAt8IoAcP0VbHe6a7SetQ==",
     adSlot: 'tcAdSlot',
     waitTime: .1,
-    lnf: {
-        d: {
-            "style": 2,
-            "placement": {
-                "size": {
-                    "fixed": {
-                        "h": "480",
-                        "w": "720"
-                    },
-                    "aspectRatio": null
-                },
-                "slider": null
-            },
-            "controls": {
-                "display": "hover",
-                "hide": [],
-                "progressBottomPos": false
-            },
-            "autoPlay": {
-                "type": 2,
-                "unmute": {
-                    "dur": -1
-                }
-            },
-            "muteBtn": {
-                "pos": {
-                    "l": "1",
-                    "t": "2"
-                },
-                "text": "Click To UnMute"
-            }
-        }, m: {
-            "style": 1,
-            "placement": {
-                "size": {
-                    "fixed": {
-                        "h": "150",
-                        "w": "200"
-                    },
-                    "aspectRatio": "0.56"
-                },
-                "slider": {
-                    "auto": false,
-                    "pos": "rb",
-                    "mr": 15,
-                    "mb": 25,
-                    "ml": 5,
-                    "mt": 5,
-                    "maxW": 500
-                }
-            },
-            "controls": {
-                "display": "fixed",
-                "hide": [],
-                "progressBottomPos": true
-            },
-            "autoPlay": {
-                "type": 2,
-                "unmute": {
-                    "dur": -1
-                }
-            },
-            "muteBtn": {
-                "pos": {
-                    "l": "0",
-                    "t": "0"
-                },
-                "text": "Click To UnMute"
-            }
-        }
-    },
+    lnf: { d: '2c9f986e77de131d0177de1487320004', m: '2c9f986e785dbebd0178753420e90296' },
     s: 2, w: false,
     autoClose: true,
     // v: {

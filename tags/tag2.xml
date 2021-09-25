@@ -1,0 +1,24 @@
+<VAST version="3.0">
+<Ad>
+<InLine>
+<AdSystem>CPC_Campaign_1(yt)_with_lead_form</AdSystem>
+<AdTitle>CPC_Campaign_1(yt)_with_lead_form</AdTitle>
+<Impression/>
+<Creatives>
+<Creative>
+<Linear>
+<Duration>00:00:10</Duration>
+<AdParameters>
+<![CDATA[ <Root> <env>b</env> <DurationSeconds>10</DurationSeconds> <Ed>3BRsqtVZBLO+2W2QvZcRpc1IA/Zbe3bRucW47hqqOa0baVm5oJDCZzy0KgoPQt+n6RdFydzEKThaeo3VCNBuzLxtHGUgBu3eEgM/fE/rO9uCkF0bWPYzfi9zc7r2tG1bEHwsSlrV9sSwbO6uzJUL/D4e7pVIg/24rqtu8s5Qy+7X1o4FXentFtDIkOo7OAbINOZsE4LuI3dTNOKxaYwle2JMS0n9kNkW73+X5JeYHBK/XiawnnJ08zF+YSNzOVkurvxA+58RQhtnYErIgWE9cY4GJCchHOvE1xOeOAjuw30=</Ed> <vURL>https://serv-b.performoo.com/vai/vv</vURL> <MainURL>https://tc-vai-qa.web.app/main.js</MainURL> <tid>2c9f986e799a8a9601799e30f5420032</tid> </Root> ]]>
+</AdParameters>
+<MediaFiles>
+<MediaFile type="application/javascript" bitrate="1500" width="600" height="400" delivery="progressive" apiFramework="VPAID">
+<![CDATA[ https://media-b.performoo.com/vpaid/vpaid-fe7432b0f4.js ]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+</VAST>

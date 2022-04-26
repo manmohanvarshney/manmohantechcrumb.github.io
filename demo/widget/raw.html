@@ -3,55 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://tags-qa.performoo.com/tag/widget/dWeQgvnl"></script>
+
 </head>
 <body>
-<!-- <script src="https://serv-qa.performoo.com/tag/widget/dVRT3KO7"></script> -->
-<script>
-    (function () {
-    /*!
-       YAAS Player
-       Copyright (c) 2022, YAAS Player, Performoo, All Rights Reserved
-       This source code and its use and distribution is subject to the terms
-       and conditions of the applicable license agreement.
-       https://media-b.performoo.com/tos/performoo-terms-of-services-mar172021.html
-       This product includes portions of other software. For the EULA (End User Level Agreement) see ..
-       https://media-b.performoo.com/eula/performoo-eula-dec292021.html
-    */
+<div id="richmedia">
+    <h1>Below is the richmedia tag</h1>
 
-    var loadTag = function (params){
-        var TC_ERROR = "Error"
-        var TC_ERROR_NO_SLOT = "Error_NoSlot"
-        var tcYaas={setup:function(e){var t=e.playerURL.replace("[ENV]",e.env),n=top.document,r=top;if(e.tagtriggerTime=(new Date).getTime(),e.config&&e.config.slotSelector)var o=e.config.slotSelector.selector,a=e.config.slotSelector.index;if(o){(l=n.createElement("div")).setAttribute("id",e.adSlot);var i=0,c=setInterval(function(){var e=n.querySelectorAll(o);if(e&&e.length>0){clearInterval(c);var t=e[a=a?parseInt(a):0];t.parentNode.insertBefore(l,t.nextSibling),s()}++i>200&&(window.clearInterval(c),tcYaas.captureError(TC_ERROR_NO_SLOT,tcYaasConfig,"TCPlayer: Slot position selector not found"))},500)}else if(n.getElementById(e.adSlot))s();else{var l;if(self===top)n.write("<div id='"+e.adSlot+"'></div>");else(l=n.createElement("div")).setAttribute("id",e.adSlot),window.frameElement.parentNode.appendChild(l);s()}function s(){if(n.getElementById(e.adSlot)){var o=function(){r.TC_YAAS.setupWidgetWrap({i:e,src:t})},a=n.createElement("script");a.async=1,a.src=t+"/tcInitWidget.js",a.onload=o,a.onreadystatechange=o,n.head.appendChild(a)}else tcYaas.captureError(TC_ERROR_NO_SLOT,tcYaasConfig,"TCPlayer: Ad Slot not found")}},captureError:function(e,t,n){console.error("TCPlayer Error: ",n)},captureEvent:function(e,t,n){if(e.ed){var r,o={...n,...(r=document.createElement("a"),r.href=document.referrer,{srcURL:function(e){if(!e)return e;var t=e.split(".");return t.size<3?e:e.includes("google")?t.slice(t.length-2).join("."):e}(self===top?encodeURIComponent(window.location.hostname):r.hostname),purl:self===top?encodeURIComponent(window.location.href.split("?")[0]):r.hostname}),action:t,event:"adtag",ed:e.ed,cacheBuster:(new Date).getTime(),tzOffset:(new Date).getTimezoneOffset()};if(e.trackBaseURL)(new Image).src=e.trackBaseURL+"?"+function(e){var t=[];for(var n in e)t.push(n+"="+e[n]);return t.join("&")}(o)}}};
-        var tcYaasConfig = {
-            playerURL: "https://media-[ENV].performoo.com/video-widget",
-            env:"qa",
-            ed:"3BRsqtVZBLO+2W2QvZcRpbGwbvNS73+Rk35vvPYF/jbihcMXGQRTnY4vm1aABb8+59q1AqNhuWq8OS3uH2GgzAm+TmurBMBXthghwYnvH4cNl5Fi2T0bJEgu6oBrnmoQ",
-            config:""
-        }
+</div>
 
-        try {
-            tcYaasConfig.adSlot = params.adSlotId
-            tcYaas.setup(tcYaasConfig)
-        } catch (e) {
-            console.error("TC Error: ",e)
-            tcYaas.captureError(TC_ERROR, tcYaasConfig, e.message)
-        }
-    }
 
-    var adSlotId = 'pf-wid-dVR3O-nZ'
-    adSlotId += "-" + new Date().getTime();
-    var w = top;
-    if (!w.TC_YAAS) {w.TC_YAAS = {};}
-    var param = {
-        adSlotId: adSlotId,
-    }
-    w.TC_YAAS[adSlotId] = {
-        loadTag: loadTag,
-        params: param
-    }
-    loadTag(param)
-}())
-</script>
-
+<div id="test">
+    <h1>Below is the richmedia tag</h1>
+</div>
 </body>
 </html>

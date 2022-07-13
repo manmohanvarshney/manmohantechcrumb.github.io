@@ -80,7 +80,69 @@
               DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED
           </p>
           <h1> below is the tag (for Instream test) </h1>
-          <script src="https://trac-b0.performoo.com/tag/am/2c9f986e80a499910180a4bbaee8000a"></script>
+          <script>
+
+
+(function () {
+    /*!
+       YAAS Player
+       Copyright (c) 2022, YAAS Player, Performoo, All Rights Reserved
+       This source code and its use and distribution is subject to the terms
+       and conditions of the applicable license agreement.
+       https://media-b.performoo.com/tos/performoo-terms-of-services-mar172021.html
+       This product includes portions of other software. For the EULA (End User Level Agreement) see ..
+       https://media-b.performoo.com/eula/performoo-eula-dec292021.html
+    */
+
+    var loadTag = function (params){
+        var TC_ERROR = "Error"
+        var TC_ERROR_NO_SLOT = "Error_NoSlot"
+        var tcYaas={setup:function(e){var t=e.playerURL.replace("[ENV]",e.env),n=top.document,r=top;e.tagtriggerTime=(new Date).getTime();var a=e.config.slotSelectors||[];if(a&&a.length>0){(l=n.createElement("div")).setAttribute("id",e.adSlot);var o=0,i=setInterval(function(){for(j=0;j<a.length;j++){var t=a[j].selector,r=a[j].index,s=n.querySelectorAll(t);if(s&&s.length>0){clearInterval(i);var d=s[r=r?parseInt(r):0];d.parentNode.insertBefore(l,d.nextSibling),c();break}++o>200&&(window.clearInterval(i),tcYaas.captureError(TC_ERROR_NO_SLOT,tcYaasConfig,"TCPlayer: Slot position selector not found"))}},500)}else if(n.getElementById(e.adSlot))c();else{var l;if(self===top)n.write("<div id='"+e.adSlot+"'></div>");else(l=n.createElement("div")).setAttribute("id",e.adSlot),window.frameElement.parentNode.appendChild(l);c()}function c(){if(n.getElementById(e.adSlot)){var a=function(){r.TC_YAAS.setupWidgetWrap({i:e,src:t})},o=n.createElement("script");o.async=1,o.src=t+"/tcInitWidget.js",o.onload=a,o.onreadystatechange=a,n.head.appendChild(o)}else tcYaas.captureError(TC_ERROR_NO_SLOT,tcYaasConfig,"TCPlayer: Ad Slot not found")}},captureError:function(e,t,n){console.error("TCPlayer Error: ",n)},captureEvent:function(e,t,n){if(e.ed){var r,a={...n,...(r=document.createElement("a"),r.href=document.referrer,{srcURL:function(e){if(!e)return e;var t=e.split(".");return t.size<3?e:e.includes("google")?t.slice(t.length-2).join("."):e}(self===top?encodeURIComponent(window.location.hostname):r.hostname),purl:self===top?encodeURIComponent(window.location.href.split("?")[0]):r.hostname}),action:t,event:"adtag",ed:e.ed,cacheBuster:(new Date).getTime(),tzOffset:(new Date).getTimezoneOffset()};if(e.trackBaseURL)(new Image).src=e.trackBaseURL+"?"+function(e){var t=[];for(var n in e)t.push(n+"="+e[n]);return t.join("&")}(a)}}};
+        var tcYaasConfig = {
+            playerURL: "https://yaas-test.s3.amazonaws.com",
+            netId: "dWHRDTf3",
+            env:"qa",
+            ed:"3BRsqtVZBLO+2W2QvZcRpTj/nZWPUsHs/pKkmJqIsQ+EXNkiel9ruPCcl1CQ+twZuP0xTEotqvgQU7hzHRfD3f2/6sObyHYN2RIemOvvLj3t2upTNzU7QMv0XvrLpnNgP769gLFvd41PSdVQjlLZMw==",
+            config:{"slotSelectors":[],"catjs":""},
+            adConfig: [],
+            tSrc: "s3"
+        }
+
+try {
+    tcYaasConfig.adSlot = params.adSlotId
+    tcYaas.setup(tcYaasConfig)
+} catch (e) {
+    console.error("TC Error: ",e)
+    tcYaas.captureError(TC_ERROR, tcYaasConfig, e.message)
+}
+}
+
+var adSlotId = 'pf-wid-dWeQgvnl'
+    adSlotId += "-" + new Date().getTime();
+    var w = top;
+    if (!w.TC_YAAS) {w.TC_YAAS = {};}
+    var param = {
+        adSlotId: adSlotId,
+        netDataURL: 'https://tags3-qa.performoo.com/dWHRDTf3/data.json'
+    }
+
+    fetch(param.netDataURL)
+        .then(res=>res.json())
+        .then( res => {
+            if (!res || !res.serving){
+                console.log("Empty Net data response or serving is off")
+            }else{
+                param = {...param, ...res}
+                w.TC_YAAS[adSlotId] = {
+                    loadTag: loadTag,
+                    params: param
+                }
+                loadTag(param)
+            }
+        })
+    }())
+
+          </script>
           <p>
               DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED
               DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED

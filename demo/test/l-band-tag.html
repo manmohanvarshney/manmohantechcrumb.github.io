@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player"></div>
+    <script src="https://yaas-test.s3.amazonaws.com/main.js"></script>
+    <script>
+      let videoSettings = {
+        url: "https://media-qa.performoo.com/videos/presidential-election.mp4",
+        cuePoints: [
+          {
+            data: {
+              creative: {
+                cta: "https://www.icicibank.com/Personal-Banking/rewards/index.page",
+                type: "IMAGE",
+                url: "https://media-qa.performoo.com/images/icici.png",
+              },
+              properties: {
+                pSize: {
+                  width: 78,
+                  type: "%",
+                  height: 78,
+                },
+                pos: "rt",
+              },
+            },
+            isPlayed: false,
+            startTime: "2",
+            endTime: "12",
+            type: "L_BAND",
+          },
+        ],
+      };
+      TC_YAAS.setup(
+        "player",
+        videoSettings,
+        { env: "qa" },
+        "8a8080df82965e270182ab520aa60e7b"
+      );
+    </script>
+    
+  </body>
+</html>

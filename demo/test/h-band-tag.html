@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player"></div>
+    <script src="https://yaas-test.s3.amazonaws.com/main.js"></script>
+    <script>
+      let videoSettings = {
+        url: "https://media-qa.performoo.com/videos/lg-refrigerator.mp4",
+        cuePoints: [
+          {
+            data: {
+              creative: {
+                cta: "https://www.lg.com/in/refrigerators",
+                type: "IMAGE",
+                url: "https://media-qa.performoo.com/images/hband/lg.png",
+              },
+              properties: {
+                pSize: {
+                  width: 100,
+                  type: "%",
+                  height: 60,
+                },
+                pos: "rt",
+              },
+            },
+            isPlayed: false,
+            startTime: "2",
+            endTime: "12",
+            type: "L_BAND",
+          },
+        ],
+      };
+      TC_YAAS.setup(
+        "player",
+        videoSettings,
+        { env: "b" },
+        "2c9f817982221de6018239dcb8fc0dfc"
+      );
+    </script>
+    
+  </body>
+</html>

@@ -102,70 +102,7 @@
             DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED
         </p>
         <h1> below is the tag (for outstream test) </h1>
-        <script>
-
-
-var _tcVastTag = typeof tcVastOSTag !== "undefined" ? tcVastOSTag : 'https://manmohantechcrumb.github.io/tags/tag1.xml?screen-height=[SCREEN_HEIGHT]&screen-width=[SCREEN_WIDTH]&meta-kwd=[META_KWD]&adunit-width=[AU_WIDTH]&adunit-height=[AU_HEIGHT]&base-url=[LOCATION_URL]&page-url=[PAGEURL]&refrer-url=[REFERRER_URL]&cache-buster=[CACHE_BUSTER]&my-macro=[PF_MY_MACRO_1]';
-(function () {
-    /*!
-       YAAS Player
-       Copyright (c) 2022, YAAS Player, Performoo, All Rights Reserved
-       This source code and its use and distribution is subject to the terms
-       and conditions of the applicable license agreement.
-       https://media-b.performoo.com/tos/performoo-terms-of-services-mar172021.html
-       This product includes portions of other software. For the EULA (End User Level Agreement) see ..
-       https://media-b.performoo.com/eula/performoo-eula-dec292021.html
-    */
-
-    var loadTag = function (params){
-        var TC_ERROR = "Error"
-        var TC_ERROR_NO_SLOT = "Error_NoSlot"
-        var tcYaas={setup:function setup(i){var src=i.playerURL,d=document,w=window;i.playInCurrentFrame||(d=top.document,w=top),i.config&&i.config.isMonitoring&&this.captureEvent(i,"Session"),i.tagtriggerTime=(new Date).getTime();var perfSlotSelector=i.slotSelector.selector,perfSlotSelectorIndex=i.slotSelector.index,hooks=i.config.hooks||[],hook=hooks.find(e=>1==e.type),newAdSlotEle=d.createElement("div");if(newAdSlotEle.setAttribute("id",i.adSlotId),hook&&hook.data){hook.data=hook.data.replace("[HOOK]",i.adSlotId),eval(hook.data);var refNode=TC_YAAS["hook1_"+i.adSlotId]();if(refNode){var adSlotEle=d.getElementById(i.adSlotId);adSlotEle&&adSlotEle.parentNode.removeChild(adSlotEle),refNode.parentNode.insertBefore(newAdSlotEle,refNode.nextSibling),loadScript()}}else if(perfSlotSelector){var adSlotEle=d.getElementById(i.adSlotId);adSlotEle&&adSlotEle.parentNode.removeChild(adSlotEle);var counter=0,querySelectorInterval=setInterval(function(){var e=d.querySelectorAll(perfSlotSelector);if(e&&e.length>0){clearInterval(querySelectorInterval);var t=e[perfSlotSelectorIndex=perfSlotSelectorIndex?parseInt(perfSlotSelectorIndex):0];t.parentNode.insertBefore(newAdSlotEle,t.nextSibling),loadScript()}++counter>200&&(window.clearInterval(querySelectorInterval),tcYaas.captureError(TC_ERROR_NO_SLOT,tcYaasConfig,"TCPlayer: Slot position selector not found"))},500)}else d.getElementById(i.adSlotId)?loadScript():(self===top||i.playInCurrentFrame||window.frameElement.parentNode.appendChild(newAdSlotEle),loadScript());function loadScript(){if(d.getElementById(i.adSlot)){var e=function(){w.TC_YAAS.setupVastOS({i:i,tag:i.vastTag,src:src})},t=d.createElement("script");t.async=1,t.src=src+"/tcInitVast.js",t.onload=e,t.onreadystatechange=e,d.head.appendChild(t)}else tcYaas.captureError(TC_ERROR_NO_SLOT,tcYaasConfig,"TCPlayer: Ad Slot not found")}},captureError:function(e,t,o){console.error("TCPlayer Error: ",o),this.captureEvent(t,e,{errorMessage:o})},captureEvent:function(e,t,o){if(e.ed){var r,a={...o,...(r=document.createElement("a"),r.href=document.referrer,{srcURL:function(e){if(!e)return e;var t=e.split(".");return t.size<3?e:e.includes("google")?t.slice(t.length-2).join("."):e}(self===top?encodeURIComponent(window.location.hostname):r.hostname),purl:self===top?encodeURIComponent(window.location.href.split("?")[0]):r.hostname}),action:t,event:"adtag",ed:e.ed,cacheBuster:(new Date).getTime(),tzOffset:(new Date).getTimezoneOffset()};if(e.trackBaseURL)(new Image).src=e.trackBaseURL+"?"+function(e){var t=[];for(var o in e)t.push(o+"="+e[o]);return t.join("&")}(a)}}};
-        var tcYaasConfig = {
-            trackBaseURL: 'https://trac-qa.performoo.com/capture',
-
-            slotSelector: {
-                selector: '',
-                index: '0'
-            },
-            env:"qa",
-            ed:"3BRsqtVZBLO+2W2QvZcRpd3rS6BnkSigUQ+MDOk1OaRedZP+l0AAuIBJr37NwZ2sr9vRZwIsTwySJcpp1v9XeU+tzcbOWv59bLkrGrzWILo=",
-            waterfallURLs:[
-                '[]',
-            ],
-            fallbackTag:'[]',
-            lnf: {d: 'dWHRH7KF', m: 'dWHRH7KF'},
-            v: {
-                type: "",
-                url: ""
-            },
-            config: {"tagReTrigger":{"interval":-1.0,"consecutiveErrorLimit":5.0},"performance":{"tagLoadTime":"0"},"hooks":[],"osConfig":{"adType":"vast","waterfallURLs":[],"hbConfig":""},"playInCurrentFrame":false,"fallbackJS":{"code":"","type":1.0,"triggerAfter":null},"isMonitoring":false,"vastRetry":{},"monitoring":false,"adSkipTime":5,"enableRemnantSelling":false,"showPlayerOnAdLoad":false,"cuePoints":[],"tagLoadTime":0},
-        }
-
-        try {
-                tcYaas.setup({...tcYaasConfig, ...params, adSlot: params.adSlotId})
-        } catch (e) {
-            console.error("TC Error: ",e)
-            tcYaas.captureError(TC_ERROR, tcYaasConfig, e.message)
-        }
-    }
-
-    var adSlotId = 'pf-vastos-dZnhftY3-' + new Date().getTime();
-    document.write("<div id='" + adSlotId + "'></div>");
-    var param = {
-        adSlotId: adSlotId,
-        vastTag: _tcVastTag,
-        netDataURL: 'https://tags3-qa.performoo.com/dWHRDTn1/data.json',
-        netId: "dWHRDTn1",
-        tagId: "dZnhftY3",
-        auId: "",
-        labelTagId: "",
-        tSrc: "s3"
-    }
-    param.playInCurrentFrame = !(document.body.clientWidth <= 1);
-    var w=top;param.playInCurrentFrame&&(w=window),w.TC_YAAS||(w.TC_YAAS={}),"undefined"!=typeof tcGamMacroClick&&(param.gamMacros={click:tcGamMacroClick}),fetch(param.netDataURL).then(a=>a.json()).then(a=>{a&&a.serving?(param={...param,...a},w.TC_YAAS[adSlotId]={loadTag:loadTag,params:param},loadTag(param)):console.log("Empty Net data response or serving is off")});
-}())
-        </script>
+        <script src="https://serv-qa.performoo.com/tag/vastos/8a8080df8517157d018520b552e208aa"></script>
         <p>
             DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED
             DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED DEMO-CPL-EMBEDDED

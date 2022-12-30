@@ -1,7 +1,7 @@
 <VAST version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <Ad id="20001">
         <InLine>
-            <AdSystem version="4.0">manmohantech</AdSystem>
+            <AdSystem version="4.0">kfc-express</AdSystem>
             <AdTitle>iabtechlab video ad</AdTitle>
             <Pricing model="cpm" currency="USD">
                 <![CDATA[ 25.00 ]]>
